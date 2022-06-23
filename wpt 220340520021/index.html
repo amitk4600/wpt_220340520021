@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jquery-3.5.1.min.js"></script>
+
+<script type="text/javascript">
+    function addParam(){
+
+        var url="updatebook0id?="+document.getElementById('bookid').value
+        +"&name="+document.getElementById('book_name').value
+        +"&price="+document.getElementById('price').value;
+        document.getElementById("myFrom").setAttribute('action'.url);
+
+    }
+</script>
+<body>
+    <h1>Book updating system</h1>
+    <form id="myForm" action="book2" enctype="text method ="get>
+        <p>
+            Book id :<input type="text" id="bookid" size="40"/>
+        </p>
+        <p>
+            book_name :<input type="text" id="book_name"name="type"size=40/>
+        </p>
+        <p>
+            Price :<input type="text" id="bookPrice"name="header"size=40/>
+        </p>
+        <input type="submit"title="Update book" onclick="addParam"/>
+    </form>
+</body>
+</html>
